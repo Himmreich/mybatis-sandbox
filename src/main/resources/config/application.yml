@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:jdbcdslog:h2:mem:my_batis.db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL;targetDriver=org.h2.Driver
+    username: sa
+    password: sa
+    driver-class-name: org.jdbcdslog.DriverLoggingProxy
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
